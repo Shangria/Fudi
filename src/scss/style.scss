@@ -1,8 +1,14 @@
 @import "reset";
 
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&family=Poppins:wght@400;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
 
 @import "../components/header/header";
+
+@import "../components/header/header-menu";
+
+@import "../components/banner/banner";
+
+@import "../components/list-information/list-information";
 
 @import "../components/footer/footer";
 

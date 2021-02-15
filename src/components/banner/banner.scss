@@ -1,0 +1,60 @@
+@import "src/scss/global-style/media";
+
+//.wrapper {
+//  font-family: 'Lato', sans-serif;
+//
+//}
+.banner {
+  position: relative;
+  background: url("../img/banner.jpg") no-repeat;
+  background-size: cover;
+  height: 100vh;
+
+  &__wrapper {
+    display: flex;
+    max-width: 1180px;
+    height: 100%;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__content {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__title {
+    font: 36px "Times New Roman", bold, sans-serif;
+    font-style: italic;
+    color: #e4d9d8;
+  }
+
+  &__main-title {
+    font: 90px Lato, bold;
+  }
+
+  &__button-start {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 215px;
+    height: 50px;
+    border: 3px white solid;
+    margin-bottom: 40px;
+  }
+
+  &__link-button {
+    font: 18px Lato, bold;
+  }
+
+  &__min-title {
+    font: 12px Lato, bold;
+    letter-spacing: 1px;
+  }
+  &__link-title{
+    border-bottom: 1px white solid;
+  }
+}

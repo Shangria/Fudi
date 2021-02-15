@@ -3,18 +3,18 @@ html(lang="en")
     head
         meta(charset="UTF-8")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
-        title Fruitzetked
-        link(rel='shortcut icon', href='./img/favicon.png', type="image/x-icon")
-        link(rel="stylesheet", href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css")
+        title Fudi
         link(rel='stylesheet', href='css/style.css')
         
     body
 
         include ../components/header/header.pug
 
-        main.wrapper#wrapper
+        main.wrapper
 
+            include ../components/banner/banner.pug
 
+            include ../components/list-information/list-information.pug
 
             include ../components/footer/footer.pug
         
