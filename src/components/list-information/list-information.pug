@@ -1,10 +1,14 @@
 section.list-information-wrapper
     .list-information-wrapper__box
         -
-            arrListInformation = [{h4: 'Free Shipping', p: 'When order over $75',i:'fa fa-truck'}, {h4: '24/7 Support', p: 'Get support all day',i:'fa fa-volume-control-phone'}, {h4: 'Refund', p: 'Get refund within 3 days!',i:'fa fa-refresh'}]
+            arrListInformation = [
+                {h4: 'GET INSPIRED', p: 'Lorem ipsum dolor sit amet, consectetur adipisc. Pellentesque vel enim a elit viverra elementuma.   Aliquam erat volutpat.',img:'../src/img/list-inf-1.png'},
+                {h4: 'GET REWARDED', p: 'Lorem ipsum dolor sit amet, consectetur adipisc. Pellentesque vel enim a elit viverra elementuma.   Aliquam erat volutpat.',img:'../src/img/list-inf-2.png'},
+                {h4: 'GET SOCIAL', p: 'Lorem ipsum dolor sit amet, consectetur adipisc. Pellentesque vel enim a elit viverra elementuma.   Aliquam erat volutpat.',img:'../src/img/list-inf-3.png'}]
         each element in arrListInformation
             .list-information-wrapper__list-container
-                i(class='' + element.i).list-information-wrapper__icon-border
+                div.list-information-wrapper__icon-border
+                    img(src=element.img)(alt='info-icon').list-information-wrapper__img
                 .list-information-wrapper__all-inform
                     h4.list-information-wrapper__title= element.h4
                     p.list-information-wrapper__text= element.p

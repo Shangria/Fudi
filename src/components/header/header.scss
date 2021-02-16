@@ -15,12 +15,11 @@
 
   &__img-logo {
     max-width: 110px;
-    padding-left: 40px;
   }
 
   &__nav-box {
     position: absolute;
-    right: 40px;
+    right: 0;
     display: flex;
 
     :first-child {
