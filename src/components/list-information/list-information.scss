@@ -9,7 +9,7 @@
   &__box {
     width: $width-container;
     display: flex;
-    height: 440px;
+    height: 270px;
     justify-content: space-evenly;
   }
 
@@ -39,31 +39,19 @@
   }
 
   &__title {
-    font: 15px $font ;
-    position: relative;
-    padding-top: 10px;
-    padding-bottom: 8px;
+    @include title;
     text-align: center;
 
     &::after {
-      content: "";
-      position: absolute;
-      left: 0px;
-      right: 0px;
-      bottom: 0px;
-      width: 88px;
-      height: 1px;
-      background-color: #ee0000;
+      @include underlining;
       margin: 0 auto;
     }
   }
 
 
   &__text {
+    @include text;
     text-align: center;
-    font: 13px lato, normal;
-    color: #5c5959;
-    line-height: 23px;
   }
 }
 

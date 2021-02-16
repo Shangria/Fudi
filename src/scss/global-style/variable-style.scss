@@ -1,2 +1,28 @@
-$font: Lato, bold;
+$font-family: 'lato', sans-serif;
 $width-container: 1180px;
+
+
+@mixin title {
+  font: 16px $font-family;
+  font-weight: bold;
+  position: relative;
+  padding-top: 10px;
+  padding-bottom: 8px;
+}
+
+@mixin text {
+  font: 13px $font-family;
+  color: #5c5959;
+  line-height: 23px;
+}
+
+@mixin underlining {
+  content: "";
+  position: absolute;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  width: 88px;
+  height: 1px;
+  background-color: #ee0000;
+}

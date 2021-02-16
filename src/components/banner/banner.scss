@@ -24,14 +24,14 @@
   }
 
   &__title {
-    font: 36px "Times New Roman", bold, sans-serif;
+    font: 33px "Times New Roman", bold, sans-serif;
     font-style: italic;
     color: #e4d9d8;
   }
 
   &__main-title {
-    font: 90px $font;
-    margin-bottom: 15px;
+    font: 87px $font-family, bold;
+    margin-bottom: 10px;
   }
 
   &__button-start {
@@ -45,11 +45,11 @@
   }
 
   &__link-button {
-    font: 18px $font;
+    font: 14px $font-family, bold;
   }
 
   &__min-title {
-    font: 12px $font;
+    font: 12px $font-family, bold;
     letter-spacing: 1px;
   }
   &__link-title{
