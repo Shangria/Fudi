@@ -26,3 +26,10 @@ $width-container: 1180px;
   height: 1px;
   background-color: #ee0000;
 }
+
+@mixin dot {
+  margin-left: 7px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}

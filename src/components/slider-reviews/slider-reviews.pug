@@ -1,14 +1,19 @@
 section.slider-reviews
-            .slider-reviews__container
+            .slider-reviews__container#slider-container
                 -
                     arrReviews = [
                         {img: '../src/img/avatar.png', span: '"I am so happy because I found this recipe, and it just made my life easier. Thanks  so much for sharing!”', p: '- Michael Dawson, San Francisco, CA '},
                         {img: '../src/img/avatar.png', span: '"I am so happy because I found this recipe, and it just made my life easier. Thanks  so much for sharing!”', p: '- Michael Dawson, San Francisco, CA '},
                         {img: '../src/img/avatar.png', span: '"I am so happy because I found this recipe, and it just made my life easier. Thanks  so much for sharing!”', p: '- Michael Dawson, San Francisco, CA '}]
                 each element, i in arrReviews
-                    ul.slider-reviews__box
+                    ul.slider-reviews__box(data-slider)
                         li.slider-reviews__avatar
                             img(src=element.img)(alt='avatar')
                         li.slider-reviews__comment=element.span
                         li.slider-reviews__name=element.p
+                .slider-reviews__dots-box#dots-container
+                    - for (let x = 0; x < 3; x++)
+                        .slider-reviews__dot(data-dot)
+
+
 

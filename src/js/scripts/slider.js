@@ -1,88 +1,69 @@
-export class Slider {
-    constructor(slides) {
-        this.sliderElements = [];
-        this.currentIndex = 0;
-        for (const slide of slides) {
-            this.sliderElements.push(slide);
-        }
+window.addEventListener('load', function () {
+
+    const sliders = document.querySelectorAll('[data-slider]');
+    const dots = document.querySelectorAll('[data-dot]');
+    let index = 0;
+
+    callSliderFunctions();
+
+
+    function callSliderFunctions() {
+        activeSlide(sliders, index);
+        activeDote(dots, index);
     }
 
-    prev() {
-        if (this.currentIndex === 0) {
-            this.setSlide(this.sliderElements.length - 1);
-        } else {
-            this.setSlide(this.currentIndex - 1);
-        }
-    }
-
-    next() {
-        if (this.currentIndex === this.sliderElements.length - 1) {
-            this.setSlide(0);
-        } else {
-            this.setSlide(this.currentIndex + 1);
-        }
-    }
-
-    setSlide(index) {
-        this.currentIndex = index;
-        this.sliderElements.map((element, index) => {
-                if (index === this.currentIndex) {
-                    element.classList.remove('slider-hidden');
-                    element.classList.add('slider-shown');
-                } else {
-                    element.classList.add('slider-hidden');
-                    element.classList.remove('slider-shown');
-                }
-            }
-        );
-    }
-
-    init() {
-        this.setSlide(0);
-    }
-
-    destroy() {
-        this.sliderElements.map((element, index) => {
-            element.classList.remove('slider-hidden');
-            element.classList.remove('slider-shown');
-        });
-    }
-}
-
-export class AutoSlider extends Slider {
-    constructor(slides, autoscrollInterval) {
-        super(slides);
-        this.timeoutId = null;
-        this.autoscrollInterval = autoscrollInterval || 5000;
-    }
-
-    setSlide(index) {
-        this.stopAutoscroll();
-        this.startAutoscroll(this.currentIndex, index);
-        super.setSlide(index);
-    }
-
-    destroy() {
-        super.destroy();
-        this.stopAutoscroll();
-    }
-
-    stopAutoscroll() {
-        if (this.timeoutId) {
-            clearTimeout(this.timeoutId);
-        }
-    }
-
-    startAutoscroll(currentIndex, nextIndex) {
-        this.timeoutId = setTimeout(() => {
-            if (nextIndex >= currentIndex) {
-                this.next();
+    function activeSlide(arr, number) {
+        arr.forEach(function (elem, indexElem) {
+            if (elem[indexElem] === 0) {
+                elem.classList.add('slider-reviews_active');
             } else {
-                this.prev();
+                elem.classList.remove('slider-reviews_active');
             }
-        }, this.autoscrollInterval);
+        })
+        arr[number].classList.add('slider-reviews_active');
     }
-}
 
+    function activeDote(arr, number) {
+        arr.forEach(function (elem, indexElem) {
+            if (elem[indexElem] === 0) {
+                elem.classList.add('slider-reviews_dot-active');
+            } else {
+                elem.classList.remove('slider-reviews_dot-active');
+            }
+        })
+        arr[number].classList.add('slider-reviews_dot-active');
+    }
 
+    const nextSlide = () => {
+        if (index === sliders.length - 1) {
+            index = 0;
 
+        } else {
+            index++;
+            activeSlide(sliders, index);
+            activeDote(dots, index);
+        }
+    }
+
+    const prevSlide = () => {
+        if (index === 0) {
+            index = sliders.length - 1;
+            activeSlide(sliders, index);
+            activeDote(dots, index);
+        } else {
+            index--;
+            activeSlide(sliders, index);
+            activeDote(dots, index);
+        }
+    }
+
+    dots.forEach(function (elem, indexElem) {
+        elem.addEventListener('click', function () {
+            index = indexElem;
+            console.log(index)
+            callSliderFunctions();
+        })
+    })
+
+    setInterval(nextSlide, 2000)
+})

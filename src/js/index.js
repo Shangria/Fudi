@@ -6,7 +6,8 @@ import '../scss/style.scss'
 //
 // import './scripts/timer.js';
 //
-// import './scripts/slider-owners.js';
+
+import './scripts/slider.js';
 
 
 
