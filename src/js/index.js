@@ -1,6 +1,6 @@
 import '../scss/style.scss'
 
-// import './scripts/data-storage.js';
+import './scripts/data-storage.js';
 //
 //
 //

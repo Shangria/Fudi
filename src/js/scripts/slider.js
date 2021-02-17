@@ -4,6 +4,7 @@ window.addEventListener('load', function () {
     const dots = document.querySelectorAll('[data-dot]');
     let index = 0;
 
+
     callSliderFunctions();
 
 
@@ -14,22 +15,14 @@ window.addEventListener('load', function () {
 
     function activeSlide(arr, number) {
         arr.forEach(function (elem, indexElem) {
-            if (elem[indexElem] === 0) {
-                elem.classList.add('slider-reviews_active');
-            } else {
-                elem.classList.remove('slider-reviews_active');
-            }
+            elem.classList.remove('slider-reviews_active');
         })
         arr[number].classList.add('slider-reviews_active');
     }
 
     function activeDote(arr, number) {
         arr.forEach(function (elem, indexElem) {
-            if (elem[indexElem] === 0) {
-                elem.classList.add('slider-reviews_dot-active');
-            } else {
-                elem.classList.remove('slider-reviews_dot-active');
-            }
+            elem.classList.remove('slider-reviews_dot-active');
         })
         arr[number].classList.add('slider-reviews_dot-active');
     }
@@ -40,30 +33,24 @@ window.addEventListener('load', function () {
 
         } else {
             index++;
-            activeSlide(sliders, index);
-            activeDote(dots, index);
+            callSliderFunctions();
         }
     }
 
     const prevSlide = () => {
         if (index === 0) {
             index = sliders.length - 1;
-            activeSlide(sliders, index);
-            activeDote(dots, index);
+            callSliderFunctions();
         } else {
             index--;
-            activeSlide(sliders, index);
-            activeDote(dots, index);
+            callSliderFunctions();
         }
     }
 
     dots.forEach(function (elem, indexElem) {
         elem.addEventListener('click', function () {
             index = indexElem;
-            console.log(index)
             callSliderFunctions();
         })
     })
-
-    setInterval(nextSlide, 2000)
 })
