@@ -1,4 +1,5 @@
 @import "src/scss/global-style/media";
+@import "src/scss/global-style/variable-style";
 
 .popup {
   position: fixed;
@@ -11,20 +12,73 @@
   height: 100%;
 
   &__box {
+    font-family: $font-family;
+    width: 35%;
+    color: white;
+    height: 45%;
     position: relative;
-    padding: 60px;
     border-radius: 5px;
-    background: linear-gradient(184deg, rgba(41, 18, 57, 1) 0%, rgba(41, 18, 57, 1) 7%, rgba(149, 115, 92, 1) 100%);
+    background: linear-gradient(184deg, rgba(41, 18, 57, 1) 0%, rgba(41, 18, 57, 1) 7%, rgb(151, 96, 157) 100%);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
   }
-  &__close{
-    position: absolute;
-    top:0;
-    left: 0;
-    background-color: #e4d9d8;
 
+  &__close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: none;
+    border: none;
+    font-size: 15px;
+    transition: all 0.3s;
+    cursor: pointer;
+    padding: 1px 5px;
+
+    &:hover {
+      color: #9221d6;
+    }
+  }
+
+  &__form {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__logo {
+    max-width: 80px;
+  }
+
+  &__title {
+    padding-bottom: 10px;
+  }
+
+  &__input {
+    margin-top: 5px;
+    background-color: #97609d;
+
+    &::placeholder {
+      font-size: 12px;
+      color: white;
+    }
+  }
+
+  &__form-btn {
+    padding: 10px;
+    background-color: #6e2281;
+    margin-top: 14px;
+    border: none;
+    color: #e4d9d8;
+  }
+
+  &__text {
+    padding-top: 15px;
+    font-size: 13px;
+  }
+
+  &__link {
+    text-decoration: underline;
   }
 }
