@@ -8,19 +8,18 @@ window.addEventListener('load', function () {
         const timePerTick=100;
 
         function countNumber(value,elem) {
-            debugger
             const stopCount = Number(value.replace(',', ''));
             let startCount = 0;
             const step = Math.round(timePerTick*stopCount/time);
 
             const interval = setInterval(() => {
-                debugger
                 startCount = startCount + step;
                 if (startCount >= stopCount) {
                     startCount=stopCount
                     clearInterval(interval);
                 }
                 elem.innerText =formatNumber(startCount);
+
             }, timePerTick)
         }
         function formatNumber (num) {

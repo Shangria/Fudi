@@ -2,10 +2,28 @@
 @import "src/scss/global-style/variable-style";
 
 .footer {
-  &__container{
+  background-color: #f7f7f7;
+  height: 70px;
+  display: flex;
+
+  &__container {
     width: $width-container;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    font-size: 11px;
+    @include text;
+
   }
 
+  &__link-title {
+    letter-spacing: 2px;
+  }
+  &__link{
+    color: black;
+    font-weight: bold;
+  }
 }
 
 
