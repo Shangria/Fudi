@@ -16,7 +16,7 @@
     font-family: $font-family;
   }
   &__item-quantity{
-    font-size: 36px;
+    font:  bold 30px  $font-family;
   }
   &__item-text{
     @include text;
