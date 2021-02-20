@@ -1,0 +1,25 @@
+@import "src/scss/global-style/media";
+@import "src/scss/global-style/variable-style";
+
+.counter{
+  &__container{
+    width: $width-container;
+    margin: 0 auto;
+  }
+  &__list{
+    display: flex;
+    justify-content: space-around;
+    max-width: 1078px;
+    padding-top: 30px;
+  }
+  &__item{
+    font-family: $font-family;
+  }
+  &__item-quantity{
+    font-size: 36px;
+  }
+  &__item-text{
+    @include text;
+  }
+}
+

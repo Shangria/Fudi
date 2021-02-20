@@ -1,0 +1,20 @@
+section.counter
+        .counter__container
+            ul.counter__list
+                -
+                    listConter = [
+                        {div:'0', span:'Recipes Available'},
+                        {div:'0', span:'Active Users'},
+                        {div:'0', span:'Positive Reviews'},
+                        {div:'0', span:'Photos & Videos'},
+                        {div:'0', span:'Spices and Herbs'},
+                    ];
+                each element in listConter
+                    li.counter__item
+                        .counter__item-quantity=element.div
+                        .counter__item-text=element.span
+
+
+
+
+

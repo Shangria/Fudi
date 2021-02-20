@@ -2,7 +2,7 @@
   "name": "fudi",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+   "main": "index.js",
   "scripts": {
     "build": "webpack",
     "dev": "webpack --mode=development --watch"
