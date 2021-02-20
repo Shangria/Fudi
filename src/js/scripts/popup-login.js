@@ -47,5 +47,4 @@ window.addEventListener('load', function () {
             popup.remove();
         });
     }
-
 })

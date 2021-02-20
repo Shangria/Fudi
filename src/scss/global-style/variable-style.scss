@@ -1,5 +1,5 @@
 $font-family: 'lato', sans-serif;
-$width-container: 1180px;
+$width-container: 80%;
 
 
 @mixin title {
@@ -32,4 +32,11 @@ $width-container: 1180px;
   width: 8px;
   height: 8px;
   border-radius: 50%;
+}
+@mixin hamburger{
+  display: block;
+  position: absolute;
+  width: 25px;
+  height: 4px;
+  background-color: #fff8f8;
 }
