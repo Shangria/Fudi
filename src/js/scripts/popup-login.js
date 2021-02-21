@@ -1,7 +1,7 @@
 window.addEventListener('load', function () {
 
     const logIn = {
-        img: './img/logo.png',
+        img: 'img/logo.png',
         title: 'LOG-IN',
         inputName: 'Username or email',
         inputPassword: 'Password',

@@ -8,7 +8,7 @@ window.addEventListener('load', function () {
 
 
     const logSign = {
-        img: './img/logo.png',
+        img: 'img/logo.png',
         title: 'SIGN-UP',
         inputName: 'Username',
         inputEmail: 'Email',
