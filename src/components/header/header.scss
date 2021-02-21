@@ -44,9 +44,12 @@
     cursor: pointer;
     font: 12px Lato, bold;
     color: white;
+    transition: transform 0.3s ease-out;
 
     &:hover {
-      color: #130026;
+      transform: scale(1.5);
+      transition: transform 0s;
+      font-size: 14px;
     }
   }
 }

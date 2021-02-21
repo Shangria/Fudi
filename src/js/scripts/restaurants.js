@@ -29,17 +29,18 @@ window.addEventListener('load', function () {
     function sortRestaurantsListUp(data){
         debugger
         data.sort(function (elem1,elem2){
-            const number1=parseInt(elem1.text);
-            const number2=parseInt(elem2.text);
+            const number1=parseInt(formatNumber(elem1.text));
+            const number2=parseInt(formatNumber(elem2.text));
             return number1-number2;
         })
         createRestaurantsList(data);
     }
 
     function sortRestaurantsListDown(data){
+        debugger
         data.sort(function (elem1,elem2){
-            const number1=parseInt(elem1.text);
-            const number2=parseInt(elem2.text);
+            const number1=parseInt(formatNumber(elem1.text));
+            const number2=parseInt(formatNumber(elem2.text));
             return number2-number1;
         })
         createRestaurantsList(data);
@@ -53,4 +54,8 @@ window.addEventListener('load', function () {
     btnArrowDown.addEventListener('click', function (){
         sortRestaurantsListDown(dataStorage.restaurants);
     });
+
+    function formatNumber (num) {
+        return num.replace(/[\s.,%]/g, '');
+    }
 })
