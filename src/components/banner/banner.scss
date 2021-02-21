@@ -27,11 +27,17 @@
     font: 33px "Times New Roman", bold, sans-serif;
     font-style: italic;
     color: #e4d9d8;
+    @include breakpoint(tablet-600) {
+      font-size: 20px;
+    }
   }
 
   &__main-title {
     font: 87px $font-family, bold;
     margin-bottom: 10px;
+    @include breakpoint(tablet-600) {
+      font-size: 60px;
+    }
   }
 
   &__button-start {
@@ -42,6 +48,10 @@
     height: 50px;
     border: 3px white solid;
     margin-bottom: 40px;
+    @include breakpoint(tablet-600) {
+      width: 100px;
+      height: 30px;
+    }
   }
 
   &__link-button {
@@ -51,8 +61,12 @@
   &__min-title {
     font: 12px $font-family, bold;
     letter-spacing: 1px;
+    @include breakpoint(sm-min) {
+      font-size: 8px;
+    }
   }
-  &__link-title{
+
+  &__link-title {
     border-bottom: 1px white solid;
   }
 }

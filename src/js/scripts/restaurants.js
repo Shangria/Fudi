@@ -27,7 +27,6 @@ window.addEventListener('load', function () {
     createRestaurantsList(dataStorage.restaurants);
 
     function sortRestaurantsListUp(data){
-        debugger
         data.sort(function (elem1,elem2){
             const number1=parseInt(formatNumber(elem1.text));
             const number2=parseInt(formatNumber(elem2.text));
@@ -37,7 +36,6 @@ window.addEventListener('load', function () {
     }
 
     function sortRestaurantsListDown(data){
-        debugger
         data.sort(function (elem1,elem2){
             const number1=parseInt(formatNumber(elem1.text));
             const number2=parseInt(formatNumber(elem2.text));

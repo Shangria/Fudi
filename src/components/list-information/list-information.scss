@@ -4,13 +4,20 @@
 .list-information-wrapper {
   display: flex;
   justify-content: center;
-  margin-top: 80px;
+  padding-top: 80px;
+  @include breakpoint(tablet-600) {
+    padding: 165px 0;
+  }
 
   &__box {
     width: $width-container;
     display: flex;
     height: 270px;
     justify-content: space-evenly;
+    @include breakpoint(tablet-600) {
+      flex-direction: column;
+      width: auto;
+    }
   }
 
   &__list-container {
@@ -18,6 +25,10 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    @include breakpoint(tablet-600) {
+      padding-top: 5px;
+      width: 100%;
+    }
   }
 
   &__icon-border {

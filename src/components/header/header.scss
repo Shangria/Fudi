@@ -24,10 +24,17 @@
     align-items: center;
     justify-content: space-between;
     transition: 0.3s;
+    @include breakpoint(tablet-600) {
+    padding: 0 20px;
+      width: 90%;
+    }
   }
 
   &__img-logo {
     max-width: 110px;
+    @include breakpoint(sm-min) {
+      max-width: 80px;
+    }
   }
 
   &__nav-wrapper {

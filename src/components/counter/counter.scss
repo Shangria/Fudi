@@ -2,26 +2,55 @@
 @import "src/scss/global-style/variable-style";
 
 .counter{
+  @include breakpoint(sm-min) {
+    width: 70%;
+    margin: 0 auto;
+  }
   &__container{
     width: $width-container;
     margin: 0 auto;
     height: 135px;
+    @include breakpoint(md-max) {
+      width: 95%;
+      height: auto;
+      padding-bottom: 10px;
+    }
+
   }
   &__list{
     display: flex;
     justify-content: space-around;
     max-width: 1078px;
     padding-top: 30px;
+    @include breakpoint(sm-min) {
+      width: 95%;
+    }
   }
   &__item{
     font-family: $font-family;
     text-align: center;
+    @include breakpoint(md-max) {
+     padding-right: 10px;
+    }
   }
   &__item-quantity{
     font:  bold 30px  $font-family;
+    @include breakpoint(md-max) {
+      font-size: 20px;
+    }
+    @include breakpoint(sm-max) {
+      font-size: 15px;
+    }
   }
   &__item-text{
     @include text;
+    @include breakpoint(md-max) {
+      font-size: 10px;
+    }
+    @include breakpoint(sm-min) {
+      font-size: 8px;
+      line-height: 12px;
+    }
   }
 }
 

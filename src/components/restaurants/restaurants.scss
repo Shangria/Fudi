@@ -3,14 +3,20 @@
 
 .restaurants {
   position: relative;
-  height: 500px;
   padding-top: 65px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  @include breakpoint(tablet-600) {
+    padding-top: 25px;
+  }
 
   &__title {
     @include title;
+    @include breakpoint(md-max) {
+      font-size: 15px;
+      padding-right: 70px;
+    }
 
     &::after {
       margin: 0 auto;
@@ -21,6 +27,10 @@
   &__arrows {
     position: absolute;
     right: 0;
+    display: flex;
+    @include breakpoint(tablet-600) {
+      right: 20px;
+    }
   }
 
   &__arrows-up,
@@ -44,6 +54,9 @@
     width: 100%;
     display: flex;
     flex-wrap: wrap;
+    @include breakpoint(md-max) {
+     flex-direction: column;
+    }
   }
 
   &__item {
@@ -51,6 +64,10 @@
     max-width: 20%;
     display: flex;
     justify-content: center;
+    @include breakpoint(md-max) {
+      max-width: 100%;
+      padding-bottom: 5px;
+    }
   }
 
   &__item-box {
@@ -60,14 +77,20 @@
     z-index: 5;
     margin: 0;
     top: 50%;
-    transform: translate(0, -50%)
+    transform: translate(0, -50%);
   }
 
   &__item_quantity {
     font: italic bold 14px "Times New Roman";
+    @include breakpoint(lg-max) {
+      font-size: 13px;
+    }
   }
 
   &__item_title {
     font: 30px $font-family;
+    @include breakpoint(lg-max) {
+      font-size: 15px;
+    }
   }
 }

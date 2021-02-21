@@ -14,7 +14,10 @@
     margin: 0 auto;
     font-size: 11px;
     @include text;
-
+    @include breakpoint(sm-max) {
+      font-size: 8px;
+      width: 90%;
+    }
   }
 
   &__link-title {

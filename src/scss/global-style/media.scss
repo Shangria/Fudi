@@ -7,6 +7,10 @@
     @media (max-width: 1024px) {
       @content;
     }
+  } @else if $point == lg-maxL {
+    @media (max-width: 1500px) {
+      @content;
+    }
   } @else if $point == sm-min {
     @media (min-width: 320px) {
       @content;
@@ -28,7 +32,7 @@
       @content;
     }
   } @else if $point == tablet {
-    @media (max-width: 768px) {
+    @media (min-width: 768px) {
       @content;
     }
   } @else if $point == mobile500 {
