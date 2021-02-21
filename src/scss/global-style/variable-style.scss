@@ -33,10 +33,22 @@ $width-container: 80%;
   height: 8px;
   border-radius: 50%;
 }
-@mixin hamburger{
+
+@mixin hamburger {
   display: block;
   position: absolute;
+  top: 50%;
+  left: 50%;
   width: 25px;
-  height: 4px;
+  height: 3px;
   background-color: #fff8f8;
+}
+
+@mixin background {
+  border-radius: 5px;
+  background: linear-gradient(184deg, rgba(41, 18, 57, 1) 0%, rgba(41, 18, 57, 1) 7%, rgb(151, 96, 157) 100%);
+}
+
+@mixin backgroundColorMenu {
+  background-color: rgba(40, 0, 60, 0.62);
 }

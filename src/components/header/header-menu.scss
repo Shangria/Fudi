@@ -2,44 +2,76 @@
 @import "src/scss/global-style/variable-style";
 
 .header {
+  &__menu {
+    background-color: antiquewhite;
+    width: 25%;
+    position: absolute;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    top: 100%;
+    @include backgroundColorMenu
+  }
 
-  &__menu-box {
+  &_background-color {
+    background-color: #1f0232;
+    transition-property: all;
+    transition-duration: 0.4s;
+    transition-timing-function: linear;
+  }
 
+  &_background-color-opacity {
+    transition-property: all;
+    transition-duration: 0.4s;
+    transition-timing-function: linear;
+  }
+
+  &__list-menu {
+    font-family: $font-family;
+    padding: 15px;
+
+    &:hover {
+      @include backgroundColorMenu
+    }
   }
 
   &__hamburger {
     position: relative;
-    display: block;
     width: 40px;
     height: 40px;
     cursor: pointer;
     background-color: rgba(0, 125, 215, 0);
     border: none;
-
-    &:focus {
-      outline: none;
-    }
   }
 
   &__hamburger-title {
-    top: 15px;
-    display: block;
     @include hamburger;
+    transform: translate(-50%, -50%);
+    transition: all .5s;
 
-    &::after, &::before {
-      content: '';
-      top: 10px;
-      @include hamburger;
+
+    &:nth-of-type(2) {
+      top: calc(50% + 5px);
     }
 
-    &::after {
-      top: -10px;
-    }
-
-    &::before {
-      bottom: 10px;
+    &:nth-of-type(3) {
+      top: calc(50% - 5px);
     }
   }
 
+  &_active-hamburger &__hamburger-title {
+    &:nth-of-type(1) {
+      opacity: 0;
+    }
 
+    &:nth-of-type(2) {
+      top: 50%;
+      transform: translate(-50%, -50%) rotate(45deg);
+    }
+
+    &:nth-of-type(3) {
+      top: 50%;
+      transform: translate(-50%, -50%) rotate(-45deg);
+    }
+  }
 }

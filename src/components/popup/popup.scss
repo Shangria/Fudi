@@ -17,12 +17,11 @@
     color: white;
     height: 45%;
     position: relative;
-    border-radius: 5px;
-    background: linear-gradient(184deg, rgba(41, 18, 57, 1) 0%, rgba(41, 18, 57, 1) 7%, rgb(151, 96, 157) 100%);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    @include background;
   }
 
   &__close {

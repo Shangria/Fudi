@@ -1,16 +1,6 @@
 nav.header__menu-box
-        .header__btn
-            button.header__hamburger.header_hamburger-animation
-                span.header__hamburger-title
-        ul.header__menu#header__menu-title
-            -
-                arr = [
-                    {href: './index.html', name: '', items: []},]
-            each element in arr
-                li(data-sub-menu=element.name).header__list-menu
-                    a.header__link(href=element.href)=element.name
-                    ul.header__sub-menu
-                        each item  in element.items
-                            li.header__sub-list
-                                a.header__sub-link(href='' + item.href)='' + item.name
+    button.header__hamburger#header__hamburger-btn
+        span.header__hamburger-title
+        span.header__hamburger-title
+        span.header__hamburger-title
 
