@@ -61,7 +61,7 @@
   &__min-title {
     font: 12px $font-family, bold;
     letter-spacing: 1px;
-    @include breakpoint(sm-min) {
+    @include breakpoint(sm-max) {
       font-size: 8px;
     }
   }
