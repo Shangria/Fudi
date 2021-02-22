@@ -85,12 +85,18 @@
     @include breakpoint(lg-max) {
       font-size: 13px;
     }
+    @include breakpoint(md-max) {
+      font-size: 18px;
+    }
   }
 
   &__item_title {
     font: 30px $font-family;
-    @include breakpoint(mobile500) {
+    @include breakpoint(lg-max) {
       font-size: 15px;
+    }
+    @include breakpoint(md-max) {
+      font-size: 35px;
     }
   }
 }

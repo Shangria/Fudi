@@ -3084,11 +3084,17 @@ input, select {
     @media (max-width: 1024px) {
       .restaurants__item_quantity {
         font-size: 13px; } }
+    @media (max-width: 820px) {
+      .restaurants__item_quantity {
+        font-size: 18px; } }
   .restaurants__item_title {
     font: 30px "lato", sans-serif; }
-    @media (max-width: 500px) {
+    @media (max-width: 1024px) {
       .restaurants__item_title {
         font-size: 15px; } }
+    @media (max-width: 820px) {
+      .restaurants__item_title {
+        font-size: 35px; } }
 
 @media (min-width: 320px) {
   .counter {
