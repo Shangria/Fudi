@@ -1,9 +1,9 @@
 window.addEventListener('load', function () {
     const menuOdj = [
         {href: './index.html', name: 'Home'},
-        {href: './index.html', name: 'Home'},
-        {href: './index.html', name: 'Home'},
-        {href: './index.html', name: 'Home'},
+        {href: './index.html', name: 'App-store'},
+        {href: './index.html', name: 'Counter'},
+        {href: './index.html', name: 'Restaurants'},
     ];
 
     const hamburgerBtn = document.getElementById('header__hamburger-btn');
