@@ -3045,11 +3045,11 @@ input, select {
   .restaurants__arrows-up, .restaurants__arrows-down {
     width: 50px;
     height: 30px;
-    border-radius: 50%; }
+    border-radius: 50%;
+    transition: transform 0.3s ease-out; }
     .restaurants__arrows-up:hover, .restaurants__arrows-down:hover {
-      -webkit-box-shadow: -16px -5px 27px -3px rgba(189, 3, 126, 0.2);
-      -moz-box-shadow: -16px -5px 27px -3px rgba(189, 3, 126, 0.2);
-      box-shadow: -16px -5px 27px -3px rgba(189, 3, 126, 0.2); }
+      transform: scale(1.5);
+      transition: transform 0s; }
   .restaurants__container {
     padding-top: 30px;
     width: 100%; }
