@@ -10,6 +10,8 @@
     width: $width-container;
     margin: 0 auto;
     height: 135px;
+    display: flex;
+    justify-content: center;
     @include breakpoint(md-max) {
       width: 95%;
       height: auto;
@@ -47,7 +49,7 @@
     @include breakpoint(md-max) {
       font-size: 10px;
     }
-    @include breakpoint(sm-min) {
+    @include breakpoint(sm-max) {
       font-size: 8px;
       line-height: 12px;
     }
