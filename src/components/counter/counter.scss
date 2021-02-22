@@ -22,7 +22,7 @@
   &__list{
     display: flex;
     justify-content: space-around;
-    max-width: 1078px;
+    width: 85%;
     padding-top: 30px;
     @include breakpoint(sm-min) {
       width: 95%;
@@ -37,6 +37,12 @@
   }
   &__item-quantity{
     font:  bold 30px  $font-family;
+    @include breakpoint(lg-max) {
+      font-size: 20px;
+    }
+    @include breakpoint(md-max) {
+      font-size: 15px;
+    }
     @include breakpoint(md-max) {
       font-size: 20px;
     }
